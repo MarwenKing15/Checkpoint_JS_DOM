@@ -151,61 +151,14 @@ function like_item3(){
   
 }
 
-/***********************FUNCTION DISLIKE***************/
-
-function dislike_item1(){
-  var i=document.getElementById('dlike1');
-  var x = document.getElementById("dbtn1").value;
-  switch(x){
-    case'l':
-      i.setAttribute('class','fas fa-times-circle');
-      document.getElementById("dbtn1").value = "dl";
-      break;
-    case'dl':
-      i.setAttribute('class','far fa-times-circle');
-      document.getElementById("dbtn1").value = "l";
-      break;
-    default:
-      i.setAttribute('class','far fa-times-circle');
-  }
-  
+/***********************FUNCTION DELETE***************/
+var arr=document.querySelectorAll(".delete_item");
+ for (let x = 0; x < arr.length; x++) {
+    arr[x].addEventListener("click", function () {
+    arr[x].parentNode.parentNode.style.display = "none";
+    })
 }
 
-function dislike_item2(){
-  var i=document.getElementById('dlike2');
-  var x = document.getElementById("dbtn2").value;
-  switch(x){
-    case'l':
-      i.setAttribute('class','fas fa-times-circle');
-      document.getElementById("dbtn2").value = "dl";
-      break;
-    case'dl':
-      i.setAttribute('class','far fa-times-circle');
-      document.getElementById("dbtn2").value = "l";
-      break;
-    default:
-      i.setAttribute('class','far fa-times-circle');
-  }
-  
-}
-
-function dislike_item3(){
-  var i=document.getElementById('dlike3');
-  var x = document.getElementById("dbtn3").value;
-  switch(x){
-    case'l':
-      i.setAttribute('class','fas fa-times-circle');
-      document.getElementById("dbtn3").value = "dl";
-      break;
-    case'dl':
-      i.setAttribute('class','far fa-times-circle');
-      document.getElementById("dbtn3").value = "l";
-      break;
-    default:
-      i.setAttribute('class','far fa-times-circle');
-  }
-  
-}
   
 /********************************** TOTAL FUNCTION *******************************/
 function total_price(){
@@ -249,6 +202,10 @@ function total_price(){
   document.getElementById('shipp').innerHTML = 25;
   total_ofall=total_items1+total_items2+total_items3+25;
   if(q_item1>0||q_item2>0||q_item3>0){
+    document.getElementById('tot').innerHTML = total_ofall;
+  }
+  else if("valu1"===null||"valu2"===null||"valu3"===null)
+  {
     document.getElementById('tot').innerHTML = total_ofall;
   }
   else{

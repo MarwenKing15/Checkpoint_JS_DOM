@@ -255,7 +255,7 @@ button.qty:hover {
   background-color: #c5e8b7;
 }
 
-.btn_icon_dislike {
+.delete_item {
   background-color: transparent;
   border: none;
   padding: 12px 16px;
@@ -264,6 +264,6 @@ button.qty:hover {
   border-radius: 50%;
 }
 
-.btn_icon_dislike:hover {
+.delete_item:hover {
   background-color: #ff8a83;
 }
