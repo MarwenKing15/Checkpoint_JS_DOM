@@ -204,10 +204,6 @@ function total_price(){
   if(q_item1>0||q_item2>0||q_item3>0){
     document.getElementById('tot').innerHTML = total_ofall;
   }
-  else if("valu1"===null||"valu2"===null||"valu3"===null)
-  {
-    document.getElementById('tot').innerHTML = total_ofall;
-  }
   else{
     document.getElementById('tot').innerHTML = 0;
   }
